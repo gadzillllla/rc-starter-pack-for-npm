@@ -1,6 +1,6 @@
 {
   "name": "rc-test-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "rc-test-component",
   "main": "dist/index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "react-dom": "^16.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
     "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
