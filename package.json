@@ -9,7 +9,8 @@
     "prepublishOnly": "yarn transpile",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "kpogodin",
   "license": "MIT",
@@ -18,11 +19,12 @@
     "react-dom": "^16.3.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^4.0.7",
+    "babel-plugin-emotion": "^9.2.11",
     "css-loader": "^1.0.1",
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
@@ -32,5 +34,10 @@
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^4.0.7",
+    "babel-loader": "^8.0.4",
+    "emotion": "^9.2.12"
   }
 }
