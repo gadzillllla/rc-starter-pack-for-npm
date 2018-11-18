@@ -21,6 +21,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       }
+      // {
+      //   test: /\.stories\.jsx?$/,
+      //   loaders: '@storybook/addon-storysource/loader',
+      //   enforce: 'pre'
+      // }
     ]
   },
   plugins: [htmlWebpackPlugin],

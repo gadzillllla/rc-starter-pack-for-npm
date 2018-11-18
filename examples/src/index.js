@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import MyComponent from '../../src';
-const App = () => <MyComponent />;
+import Button from '../../src/Button/Button.js';
+
+const App = () => <Button />;
+
 render(<App />, document.getElementById('root'));
