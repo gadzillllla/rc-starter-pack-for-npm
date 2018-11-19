@@ -4,6 +4,7 @@ import { withStorySource } from '@storybook/addon-storysource';
 import MyComponent from '../src';
 import Button from '../src/Button/Button.js';
 import CircleLoader from '../src/CircleLoader/CircleLoader.js';
+import Checkbox from '../src/Checkbox/Checkbox.js';
 
 const gradient =
   'repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px)';
@@ -51,3 +52,15 @@ storiesOf('Circle loader', module)
   )
   .add('default', () => <CircleLoader />)
   .add('custom color', () => <CircleLoader color="red" />);
+
+storiesOf('Checkbox', module)
+  .addDecorator(
+    withStorySource(`
+    <Checkbox label="hello, checkbox!" />
+    <Checkbox label="hello, custom color checkbox! color="red" />
+      `)
+  )
+  .add('default', () => <Checkbox label="hello, checkbox!" />)
+  .add('custom color', () => (
+    <Checkbox label="hello, custom color checkbox!" color="red" />
+  ));
