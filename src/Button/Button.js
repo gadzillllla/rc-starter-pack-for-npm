@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { btn } from './lib';
+import { btn } from '../lib';
 import { css } from 'react-emotion';
 import withRipple from './Ripple.js';
 import cn from 'classnames';

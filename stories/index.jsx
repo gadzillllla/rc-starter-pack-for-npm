@@ -3,14 +3,10 @@ import { storiesOf, addDecorator } from '@storybook/react';
 import { withStorySource } from '@storybook/addon-storysource';
 import MyComponent from '../src';
 import Button from '../src/Button/Button.js';
+import CircleLoader from '../src/CircleLoader/CircleLoader.js';
 
 const gradient =
   'repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px)';
-
-const styles = {
-  textAlign: 'center',
-  marginTop: '20%'
-};
 
 storiesOf('Button', module)
   .addDecorator(
@@ -44,3 +40,14 @@ const gradient =
       CUSTOM BG
     </Button>
   ));
+
+storiesOf('Circle loader', module)
+  .addDecorator(
+    withStorySource(`
+    <CircleLoader />
+    <CircleLoader iverted/>
+    <CircleLoader color="red" />
+      `)
+  )
+  .add('default', () => <CircleLoader />)
+  .add('custom color', () => <CircleLoader color="red" />);
