@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 import colors from '../lib';
 
-const Checkbox = ({ label, color }) => {
+const Checkbox = ({ label, color, onClick, checked }) => {
   const cbx = css`
     margin: auto;
     -webkit-user-select: none;
@@ -77,8 +77,9 @@ const Checkbox = ({ label, color }) => {
   `;
 
   return (
-    <div>
+    <div onClick={onClick}>
       <input
+        checked={checked}
         className={incCbx}
         id="cbx"
         type="checkbox"
@@ -98,7 +99,9 @@ const Checkbox = ({ label, color }) => {
 
 Checkbox.propTypes = {
   label: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  onClick: PropTypes.func,
+  checked: PropTypes.bool
 };
 
 Checkbox.defaultProps = {
