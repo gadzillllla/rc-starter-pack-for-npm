@@ -5,6 +5,7 @@ import MyComponent from '../src';
 import Button from '../src/Button/Button.js';
 import CircleLoader from '../src/CircleLoader/CircleLoader.js';
 import Checkbox from '../src/Checkbox/Checkbox.js';
+import DownloadButton from '../src/DownloadButton/DownloadButton.js';
 
 const gradient =
   'repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px)';
@@ -64,3 +65,22 @@ storiesOf('Checkbox', module)
   .add('custom color', () => (
     <Checkbox label="hello, custom color checkbox!" color="red" />
   ));
+
+storiesOf('Download Button', module)
+  .addDecorator(
+    withStorySource(`
+    <DownloadButton />
+    <DownloadButton color="red" format="PDF" />
+
+    <DownloadButton inProgress />
+    <DownloadButton format="PDF" done />
+      `)
+  )
+  .add('default', () => (
+    <div>
+      <DownloadButton />
+      <DownloadButton color="red" format="PDF" />
+    </div>
+  ))
+  .add('in progress', () => <DownloadButton inProgress />)
+  .add('done', () => <DownloadButton done />);
