@@ -35,7 +35,7 @@ const Checkbox = ({ label, color, onClick, checked }) => {
       stroke-linejoin: round;
       stroke-dasharray: 16px;
       stroke-dashoffset: 16px;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
       transition-delay: 0.1s;
       transform: translate3d(0, 0, 0);
     }
@@ -72,7 +72,7 @@ const Checkbox = ({ label, color, onClick, checked }) => {
     &:checked + label span:first-child:before {
       transform: scale(3);
       opacity: 0;
-      transition: all 0.6s ease;
+      transition: all 0.25s ease;
     }
   `;
 
